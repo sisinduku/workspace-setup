@@ -21,6 +21,7 @@ suites:
   - name: default
     run_list:
       - recipe[workspace-setup::default]
+      - recipe[workspace-setup::dotfiles]
     verifier:
       inspec_tests:
         - test/integration/default
