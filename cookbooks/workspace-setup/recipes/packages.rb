@@ -4,6 +4,6 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-%w(zsh).each do |package|
+%w(zsh wget).each do |package|
   package package
 end
