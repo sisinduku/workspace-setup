@@ -22,6 +22,7 @@ suites:
     run_list:
       - recipe[workspace-setup::default]
       - recipe[workspace-setup::packages]
+      - recipe[workspace-setup::oh-my-zsh]
       - recipe[workspace-setup::dotfiles]
     verifier:
       inspec_tests:
