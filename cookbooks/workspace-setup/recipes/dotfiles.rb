@@ -10,3 +10,10 @@ cookbook_file ::File.expand_path('~/.vimrc') do
   action :create
   not_if { ::File.exists?(File.expand_path('~/.vimrc'))  }
 end
+
+cookbook_file ::File.expand_path('~/.zshrc') do
+  source '.vimrc'
+  mode '0664'
+  action :create
+  not_if { ::File.exists?(File.expand_path('~/.zshrc'))  }
+end
