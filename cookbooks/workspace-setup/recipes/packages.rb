@@ -6,6 +6,6 @@
 
 apt_update
 
-%w(zsh wget git).each do |package|
+%w(zsh wget git postgresql).each do |package|
   package package
 end

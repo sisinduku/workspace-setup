@@ -19,11 +19,13 @@ platforms:
 
 suites:
   - name: default
+    data_bags_path: "cookbooks/workspace-setup/data_bags"
     run_list:
       - recipe[workspace-setup::default]
       - recipe[workspace-setup::packages]
       - recipe[workspace-setup::oh-my-zsh]
       - recipe[workspace-setup::dotfiles]
+      - recipe[workspace-setup::rbenv]
     verifier:
       inspec_tests:
         - test/integration/default
