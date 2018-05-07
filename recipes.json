@@ -1,0 +1,8 @@
+{
+  "run_list": [
+    "recupe[workspace-setup::packages]",
+    "recupe[workspace-setup::oh-my-zsh]",
+    "recupe[workspace-setup::dotfiles]",
+    "recupe[workspace-setup::rbenv]"
+  ]
+}
