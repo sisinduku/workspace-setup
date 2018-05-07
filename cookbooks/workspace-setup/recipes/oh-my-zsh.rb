@@ -35,6 +35,11 @@ execute 'installing zsh auto suggestions' do
   not_if { File.directory?(File.expand_path("~/.oh-my-zsh/custom/plugins/zsh-autosuggestions"))  }
 end
 
+execute 'installing zsh syntax highlighting' do
+  command 'git clone https://github.com/zsh-users/zsh-syntax-highlighting "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"'
+  not_if { File.directory?(File.expand_path("~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"))  }
+end
+
 execute 'installing spaceship prompt' do
   command 'git clone https://github.com/denysdovhan/spaceship-prompt.git "$HOME/.oh-my-zsh/custom/themes/spaceship-prompt"'
   not_if { File.directory?(File.expand_path('~/.oh-my-zsh/custom/themes/spaceship-prompt')) }

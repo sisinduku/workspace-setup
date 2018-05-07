@@ -14,6 +14,10 @@ describe directory('/home/kitchen/.oh-my-zsh/custom/plugins/zsh-autosuggestions'
   it { should exist  }
 end
 
+describe directory('/home/kitchen/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting') do
+  it { should exist  }
+end
+
 describe directory('/home/kitchen/.oh-my-zsh/custom/themes/spaceship-prompt') do
   it { should exist }
 end
