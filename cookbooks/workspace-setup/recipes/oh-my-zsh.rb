@@ -30,6 +30,11 @@ execute 'installing zsh 256 color' do
   not_if { File.directory?(File.expand_path("~/.oh-my-zsh/custom/plugins/zsh-256color"))  }
 end
 
+execute 'installing zsh auto suggestions' do
+  command 'git clone https://github.com/zsh-users/zsh-autosuggestions "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"'
+  not_if { File.directory?(File.expand_path("~/.oh-my-zsh/custom/plugins/zsh-autosuggestions"))  }
+end
+
 execute 'installing spaceship prompt' do
   command 'git clone https://github.com/denysdovhan/spaceship-prompt.git "$HOME/.oh-my-zsh/custom/themes/spaceship-prompt"'
   not_if { File.directory?(File.expand_path('~/.oh-my-zsh/custom/themes/spaceship-prompt')) }

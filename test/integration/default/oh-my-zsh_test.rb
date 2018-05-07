@@ -10,6 +10,10 @@ describe directory('/home/kitchen/.oh-my-zsh/custom/plugins/zsh-256color') do
   it { should exist  }
 end
 
+describe directory('/home/kitchen/.oh-my-zsh/custom/plugins/zsh-autosuggestions') do
+  it { should exist  }
+end
+
 describe directory('/home/kitchen/.oh-my-zsh/custom/themes/spaceship-prompt') do
   it { should exist }
 end
