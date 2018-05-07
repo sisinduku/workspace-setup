@@ -5,6 +5,7 @@ This cookbooks will setup your machine into ready-to-use environment for develop
 This cookbooks will install several things:
 * ZSH
 * wget
+* vim
 * git
 * postgresql
 * rbenv (including ruby 2.5.1)
@@ -47,6 +48,11 @@ First, you need to install ChefDK. You can follow this guideline:
 Clone this repository:
   ```
   git clone https://github.com/sisinduku/workspace-setup.git $HOME/workspace-setup && cd $HOME/workspace-setup
+  ```
+
+Install dependency:
+  ```
+  berks vendor cookbooks
   ```
 
 Change name of user which you want to install in
