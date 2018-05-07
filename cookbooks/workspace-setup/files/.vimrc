@@ -1,4 +1,5 @@
 set nocompatible  
+set encoding=utf-8
 set splitright
 filetype off
 
@@ -56,13 +57,6 @@ set nu
 
 " turn on syntax highlighting
 syntax on
-
-" solarized settings
-syntax enable
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
-" end solarized settings
 
 " some stuff to get the mouse going in term
 set mouse=a
@@ -123,3 +117,4 @@ nnoremap <leader>gc :Gcommit<cr>
 
 " mapping undotree
 nnoremap <F5> :UndotreeToggle<cr>
+

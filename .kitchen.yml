@@ -24,6 +24,7 @@ suites:
       - recipe[workspace-setup::packages]
       - recipe[workspace-setup::oh-my-zsh]
       - recipe[workspace-setup::dotfiles]
+      - recipe[workspace-setup::vundle]
       - recipe[workspace-setup::rbenv]
     verifier:
       inspec_tests:

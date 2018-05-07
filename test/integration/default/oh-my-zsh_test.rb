@@ -1,5 +1,6 @@
 describe directory('/home/kitchen/.oh-my-zsh') do
   it { should exist }
+  its('owner') { should eq 'kitchen'}
 end
 
 describe directory('/opt/fonts') do

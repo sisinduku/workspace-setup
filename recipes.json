@@ -3,6 +3,7 @@
     "recupe[workspace-setup::packages]",
     "recupe[workspace-setup::oh-my-zsh]",
     "recupe[workspace-setup::dotfiles]",
+    "recupe[workspace-setup::vundle]",
     "recupe[workspace-setup::rbenv]"
   ]
 }
