@@ -3,6 +3,8 @@
 # Recipe:: oh-my-zsh
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
+user = data_bag_item('users', 'admin')
+
 execute 'installing oh-my-zsh' do
   command 'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"'
   not_if { File.directory?(File.expand_path('~/.oh-my-zsh')) }
@@ -21,6 +23,11 @@ execute 'install-powerline-fonts' do
   cwd '/opt/fonts'
   command './install.sh'
   action :nothing
+end
+
+execute 'installing zsh 256 color' do
+  command 'git clone https://github.com/chrissicool/zsh-256color "$HOME/.oh-my-zsh/custom/plugins/zsh-256color"'
+  not_if { File.directory?(File.expand_path("~/.oh-my-zsh/custom/plugins/zsh-256color"))  }
 end
 
 execute 'installing spaceship prompt' do

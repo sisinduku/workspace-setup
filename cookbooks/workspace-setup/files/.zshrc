@@ -110,12 +110,4 @@ eval "$(fasd --init auto)"
 # Ruby zsh config
 export PATH="/usr/local/bin/rbenv:$PATH"
 eval "$(rbenv init -)"
-#export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-
-source $HOME/.hushlogin
-
-# added by Anaconda3 installer
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
 
