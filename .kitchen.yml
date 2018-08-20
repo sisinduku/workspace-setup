@@ -5,7 +5,7 @@ driver:
   use_sudo: false
 
 provisioner:
-  name: chef_zero
+  name: chef_solo
   # You may wish to disable always updating cookbooks in CI or other testing environments.
   # For example:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
@@ -13,6 +13,7 @@ provisioner:
 
 verifier:
   name: inspec
+  sudo: false
 
 platforms:
   - name: ubuntu-16.04
@@ -22,11 +23,17 @@ suites:
     data_bags_path: "cookbooks/workspace-setup/data_bags"
     run_list:
       - recipe[workspace-setup::packages]
+      - recipe[workspace-setup::rbenv]
+      - recipe[java]
       - recipe[workspace-setup::oh-my-zsh]
       - recipe[workspace-setup::dotfiles]
       - recipe[workspace-setup::vundle]
-      - recipe[workspace-setup::rbenv]
+    attributes:
+      java:
+        install_flavor: "oracle"
+        jdk_version: "8"
+        oracle:
+          accept_oracle_download_terms: true
     verifier:
       inspec_tests:
         - test/integration/default
-    attributes:

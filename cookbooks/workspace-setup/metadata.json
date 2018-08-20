@@ -1,0 +1,44 @@
+{
+  "name": "workspace-setup",
+  "description": "Installs/Configures workspace-setup",
+  "long_description": "Installs/Configures workspace-setup",
+  "maintainer": "The Authors",
+  "maintainer_email": "you@example.com",
+  "license": "",
+  "platforms": {
+  },
+  "dependencies": {
+    "ruby_rbenv": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+    [
+      ">= 12.14"
+    ]
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}

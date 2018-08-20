@@ -23,3 +23,6 @@ Policyfile.lock.json
 
 # External Cookbooks
 cookbooks/ruby_rbenv
+cookbooks/homebrew
+cookbooks/java
+cookbooks/windows

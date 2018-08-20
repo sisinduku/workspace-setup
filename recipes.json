@@ -1,9 +1,19 @@
 {
+  "default": {
+    "java": {
+      "install_flavor": "oracle",
+      "jdk_version": "8",
+      "oracle": {
+        "accept_oracle_download_terms": true
+      }
+    }
+  },
   "run_list": [
-    "recupe[workspace-setup::packages]",
-    "recupe[workspace-setup::oh-my-zsh]",
-    "recupe[workspace-setup::dotfiles]",
-    "recupe[workspace-setup::vundle]",
-    "recupe[workspace-setup::rbenv]"
+    "recipe[workspace-setup::packages]",
+    "recipe[workspace-setup::rbenv]",
+    "recipe[java]",
+    "recipe[workspace-setup::oh-my-zsh]",
+    "recipe[workspace-setup::dotfiles]",
+    "recipe[workspace-setup::vundle]"
   ]
 }
