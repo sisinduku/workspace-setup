@@ -65,6 +65,7 @@ if !has("nvim")
 endif
 
 " nerdtree settings
+let g:NERDTreeShowHidden = 1
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
 let g:NERDTreeMinimalUI = 1
