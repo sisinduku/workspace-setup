@@ -1,19 +1,12 @@
-describe package('zsh') do
-  it { should be_installed  }
-end
-
-describe package('wget') do
-  it { should be_installed  }
-end
-
-describe package('vim') do
-  it { should be_installed }
-end
-
-describe package('git') do
-  it { should be_installed  }
-end
-
-describe package('postgresql') do
-  it { should be_installed  }
+%w(
+  zsh
+  wget
+  vim
+  git
+  tig
+  postgresql
+).each do |selected|
+  describe package(selected) do
+    it { should be_installed }
+  end
 end

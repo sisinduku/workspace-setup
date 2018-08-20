@@ -6,6 +6,6 @@
 
 apt_update
 
-%w(zsh vim wget git postgresql).each do |package|
+%w(zsh vim wget tig git postgresql).each do |package|
   package package
 end
