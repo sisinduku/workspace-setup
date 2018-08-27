@@ -24,7 +24,6 @@ Plugin 'mbbill/undotree'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'andrewradev/splitjoin.vim'
 Plugin 'tmhedberg/simpylfold'
-Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
